@@ -58,13 +58,29 @@ class クラス名:
 	pass (何も処理がない)
 ```
 
-## クラスの中に処理を追加する
+## インスタンスメソッド
 
 ```python
 class クラス名:
-	def hello(self): #第一引数にselfを追加する
-		print('こんにちは')
+    def hello(self): #第一引数にselfを追加する
+	print('こんにちは')
 ```
+
+
+## クラスメソッド
+
+```python
+class クラス名:
+    count = 0  #クラス変数
+    def __init__(self):
+        print('インスタンスが生成されました！')
+	self.count += 1
+
+    @classmethod
+    def show_info(cls): #第一引数にclsを追加する
+	print('{0} instances'.format(cls.count))
+```
+
 
 ## __init__ メソッド
 __init__メソッドは、インスタンスを生成した直後に処理を実行することができる。

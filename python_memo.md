@@ -139,3 +139,26 @@ print(tom._User__name) #これならアクセスできてしまう
 ```python
 class 子クラス名(親クラス名１, 親クラス名２):
 ```
+
+## 例外
+
+```python
+class MyException(Exception): #独自の例外を作成
+    pass
+
+def div(a, b):
+    try:
+	if(b < 0):
+	    raise MyException('not minus') #独自の例外を発火
+	print(a/b)
+    except ZeroDivisionError:
+	print('not by zero!')
+    except MyException as e: #MyExceptionを捕捉
+	print(e)
+    else:
+	print('no exception!')
+    finally:
+	print('-end-')
+
+div(10,0)
+```

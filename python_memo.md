@@ -96,7 +96,7 @@ menu_item1 = MenuItem()
 ## クラスを直接外部ファイルから読み込む（そのままクラス名を使用可能）
 
 ```python
-form モジュール名 import クラス名
+form モジュール名 import クラス名1, クラス名2
 ```
 
 ## 四捨五入
@@ -118,4 +118,24 @@ class 子クラス名(親クラス名):
 
 ```python
 super().メソッド名()
+```
+
+## アクセス制限
+Pythonには厳密なアクセス制限は存在しない。慣習的にはアンダーバーを使用しておくことになっている。
+
+```python
+class User:
+    count = 0  #クラス変数
+    def __init__(self, name):
+	self.__name = name
+
+tom = User("tom")
+print(tom.__name) #エラーが発生する
+print(tom._User__name) #これならアクセスできてしまう
+```
+
+## 多重継承
+
+```python
+class 子クラス名(親クラス名１, 親クラス名２):
 ```

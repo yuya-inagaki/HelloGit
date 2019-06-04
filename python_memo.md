@@ -263,3 +263,40 @@ print(next(g))   # 4
 ```
 
 ### map関数
+map(関数, イテレータ)
+
+```python
+def triple(n):
+    Return n * 3
+
+print(list(map(triple, [1, 2, 3])))
+```
+
+### lamda関数
+lamda 引数: 処理
+
+```python
+print(list(map(lamda n: n*3, [1, 2, 3])))
+```
+
+### filter
+filter(関数, イテレータ)
+
+```python
+def is_even(n):
+    Return n % 2 == 0
+
+print(list(filter(is_even, range(10))))  # [0, 2, 4, 6, 8]
+
+# ラムダでも実装可能
+print(list(filter(lamda n: n%2 == 0, range(10))))  # [0, 2, 4, 6, 8]
+```
+
+### 内包表記
+
+```python
+# 0-9
+print([i for i range(10)])     # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print([i * 3 for i range(10)]) # [0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
+print([i * 3 for i range(10) if i % 2 == 0]) # [0, 6, 12, 18, 24]
+```

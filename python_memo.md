@@ -64,6 +64,9 @@ class クラス名:
 class クラス名:
     def hello(self): #第一引数にselfを追加する
 	print('こんにちは')
+
+user = クラス名() 
+user.hello()  # 一度インスタンス化してから呼び出す必要がある
 ```
 
 
@@ -79,6 +82,8 @@ class クラス名:
     @classmethod
     def show_info(cls): #第一引数にclsを追加する
 	print('{0} instances'.format(cls.count))
+
+クラス名.show_info() # クラス関数の呼び出し
 ```
 
 

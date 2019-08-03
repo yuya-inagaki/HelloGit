@@ -20,6 +20,13 @@
 - アイトラッカーを使用した顕著性マップの生成に関する関連研究を調査
 
 ## 既存のウェブページ視線データセット
-- FIWI(Fixation in Webpage Images) dataset
+ほとんどウェブページに関するものはなく、これまでに知っているものは以下の一つのみ
+- [FIWI(Fixation in Webpage Images) dataset](https://link.springer.com/chapter/10.1007/978-3-319-10584-0_3)
  > Chengyao Shen, Qi Zhao. Webpage Saliency [ECCV 2014]
- > 149webpages / 3categories(text, pictorial, mixed) / size: 1360x768px / ages: 21-25
+ > 149webpages / 3categories(text, pictorial, mixed) / size: 1360x768px / ages: 21-25 / free viewing
+
+![webpagesaliency.jpg](https://www-users.cs.umn.edu/~qzhao/images/proj_webpage_saliency/example_webpage1.PNG)
+
+## 現在取り組んでいること
+- 過去の研究でどのように視線データから顕著性マップを生成しているかを確認
+- 実際にその方法が可能かどうか検証実験

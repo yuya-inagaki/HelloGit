@@ -34,9 +34,15 @@ ffmpeg -i [オリジナル動画] -i [圧縮後の動画] -filter_complex psnr -
 | 265x | 35.100142[db] | 39.806860[db] | 42.439690[db] | 43.765471[db] | 44.54526[db] | 45.415505[db] | 45.822527[db] |
 
 
+#### 考察
+- エンコード時間はH.265の方が時間がかかる
+- H.265はH.264と同等の画質を得るためのビットレートが低くデータ削減に繋がる
+- H.264とH.265の同じビットレートで圧縮した際の画質を比較するとH.265の方が圧倒的に高画質であった
 
 #### 参考サイト
 - [動画圧縮する時ってみなさんどうしてます？](https://creatorsblog.nijibox.jp/mov-optimize/)
 - [2つの映像の画質評価をする PSNR](https://nico-lab.net/psnr_with_ffmpeg/)
+- [H.264でエンコードする](http://tech.ckme.co.jp/ffmpeg_h264.shtml)
+- [H.265でエンコードする](http://tech.ckme.co.jp/ffmpeg_h265.shtml)
 
 ## 課題２
